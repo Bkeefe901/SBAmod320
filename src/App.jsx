@@ -7,6 +7,9 @@ import NavBar from './components/NavBar';
 
 
 // Components
+import HomePage from './pages/HomePage';
+import GamePage from './pages/GamePage';
+import NotFound from './pages/NotFound';
 
 function App() {
 
@@ -15,9 +18,9 @@ function App() {
     <>
       <NavBar />
       <Routes>
-        <Route />
-        <Route />
-        <Route />
+        <Route path='/' element={<HomePage />}/>
+        <Route path='/game' element={<GamePage />}/>
+        <Route path='*' element={<NotFound />}/>
       </Routes>
     </>
   )
